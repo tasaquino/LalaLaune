@@ -10,3 +10,6 @@ The configuration for style-dictionary can be found here: https://github.com/tas
 
 ![design_system](https://github.com/tasaquino/LalaLaune/assets/10437479/02e36715-6f18-42b9-8bca-ed68136dbb7f)
 
+
+## Prototype:
+![Screenshot 2023-08-23 at 11 24 07 pm](https://github.com/tasaquino/LalaLaune/assets/10437479/43d64ac5-300a-4457-a55b-fbc6e73ff2b1)
