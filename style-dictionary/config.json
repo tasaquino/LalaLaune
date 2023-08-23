@@ -1,0 +1,18 @@
+{
+    "source": [
+        "../tokens.json"
+    ],
+    "platforms": {
+        "flutter": {
+            "transformGroup": "custom/flutter",
+            "buildPath": "../lib/style/",
+            "files": [
+                {
+                    "destination": "style_dictionary.dart",
+                    "format": "customFormat",
+                    "className": "StyleDictionary"
+                }
+            ]
+        }
+    }
+}
