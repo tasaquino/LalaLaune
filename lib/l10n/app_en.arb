@@ -1,0 +1,10 @@
+{
+  "googleLogin": "Login with Google",
+  "@googleLogin": {
+    "description": "Login with Google"
+  },
+  "welcomeText": "Welcome to LalaLaune!",
+  "@welcomeText": {
+    "description": "Welcome to LalaLaune!"
+  }
+}

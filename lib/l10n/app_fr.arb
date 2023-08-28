@@ -1,0 +1,10 @@
+{
+    "googleLogin": "Se connecter à Google",
+    "@googleLogin": {
+        "description": "Acceder con Google"
+    },
+    "welcomeText": "Bienvenue à LalaLaune !",
+    "@welcomeText": {
+        "description": "Bienvenue à LalaLaune !"
+    }
+}
