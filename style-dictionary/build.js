@@ -2,12 +2,7 @@ const StyleDictionary = require('style-dictionary');
 const _template = require('lodash/template');
 const fs = require('fs');
 const Color = require('tinycolor2');
-const {
-  fileHeader,
-  sortByReference,
-  createPropertyFormatter,
-  sortByName,
-} = require('./formatters');
+const createPropertyFormatter = require('./formatters/createPropertyFormatter');
 console.log('Building your style dictionary ☕️ ...');
 
 StyleDictionary.registerFormat({
@@ -16,26 +11,15 @@ StyleDictionary.registerFormat({
     const template = _template(
       fs.readFileSync(__dirname + '/templates/class.dart.template')
     );
-    let allTokens;
-    
-    const { outputReferences } = options;
-    const formatProperty = createPropertyFormatter({
-      outputReferences,
-      dictionary
-    });
-
-    if (outputReferences) {
-      allTokens = [...dictionary.allTokens].sort(sortByReference(dictionary));
-    } else {
-      allTokens = [...dictionary.allTokens].sort(sortByName)
-    }
-    return template({allTokens, file, options, formatProperty, fileHeader});
+    let allTokens = [...dictionary.allTokens]
+    const formatProperty = createPropertyFormatter();
+    return template({allTokens, file, options, formatProperty});
   }
 })
 
 function generateColor(value) {
   var str = Color(value).toHex8().toUpperCase();
-  return `const Color(0x${str.slice(6)}${str.slice(0, 6)})`;
+  return `Color(0x${str.slice(6)}${str.slice(0, 6)})`;
 }
 
 StyleDictionary.registerTransform({
