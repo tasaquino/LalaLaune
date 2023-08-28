@@ -8,8 +8,15 @@ The plugin in use is https://tokens.studio/
 To generate the dart files from the tokens I am using style-dictionary https://amzn.github.io/style-dictionary with some modifications with custom Formatter and custom Transforms to better translate the Typography into Flutter TextStyles.
 The configuration for style-dictionary can be found here: https://github.com/tasaquino/LalaLaune/tree/main/style-dictionary
 
+To generate the style file in dart, with the customised formatters that were created run custom build script from style-dictionary directory:
+    node build.js
+
 ![design_system](https://github.com/tasaquino/LalaLaune/assets/10437479/02e36715-6f18-42b9-8bca-ed68136dbb7f)
 
 
 ## Prototype:
 ![Screenshot 2023-08-23 at 11 24 07 pm](https://github.com/tasaquino/LalaLaune/assets/10437479/43d64ac5-300a-4457-a55b-fbc6e73ff2b1)
+
+## Localisation
+To generate the localisation files run:
+    flutter gen-l10n
