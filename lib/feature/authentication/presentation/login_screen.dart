@@ -11,8 +11,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
-  String _errorMessage = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,10 +32,11 @@ class LoginScreenState extends State<LoginScreen> {
                     // TODO: implement login button
                   },
                   child: Text(AppLocalizations.of(context)!.googleLogin)),
-              Text(
-                _errorMessage,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+              Text('error message here',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall
+                      ?.copyWith(color: Theme.of(context).colorScheme.error)),
             ]),
       ),
     );

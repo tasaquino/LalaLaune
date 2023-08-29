@@ -22,6 +22,8 @@ jobs:
       run: flutter gen-l10n
     - name: Setup npm and Generate Style Dictionary from Figma Tokens
       run: cd style-dictionary && npm ci && node build.js
+    - name: Run static analysis
+      run: flutter analyze
     - name: Generate coverage report
       run: flutter test --coverage 
     - name: Upload coverage to Codecov
