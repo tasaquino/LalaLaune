@@ -16,7 +16,7 @@ class StyleDictionary {
     static const disabledYellow = Color(0xFFE1DFD3);
     static const mustard = Color(0xFFBE9E14);
     static const white = Color(0xFFFFFFFF);
-    static const light_grey = Color(0xFFD9D9D9);
+    static const lightGrey = Color(0xFFD9D9D9);
     static const inter = 'Inter';
     static const normal = FontWeight.normal;
     static const semibold = FontWeight.w600;

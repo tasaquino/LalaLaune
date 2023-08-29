@@ -8,7 +8,7 @@ var appTheme = ThemeData(
       .copyWith(background: Colors.white),
   primaryColor: StyleDictionary.yellow,
   hintColor: StyleDictionary.indigo,
-  cardColor: StyleDictionary.light_grey,
+  cardColor: StyleDictionary.lightGrey,
   scaffoldBackgroundColor: StyleDictionary.white,
   primaryTextTheme: const TextTheme(
     bodySmall: StyleDictionary.body,
