@@ -23,7 +23,7 @@ jobs:
     - name: Setup npm and Generate Style Dictionary from Figma Tokens
       run: cd style-dictionary && npm ci && node build.js
     - name: Generate coverage report
-      run: cd .. && flutter test --coverage 
+      run: flutter test --coverage 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
