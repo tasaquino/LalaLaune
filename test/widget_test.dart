@@ -11,20 +11,24 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:lala_laune/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  TestWidgetsFlutterBinding.ensureInitialized();
+  testWidgets('Login screen is displayed correctly in pt-BR',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp(
+      locale: Locale('pt', 'BR'),
+    ));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Login com o Google'), findsOneWidget);
+    expect(find.text('Bem-vindo ao LalaLaune!'), findsOneWidget);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  testWidgets('Login screen is displayed correctly in en-US',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp(
+      locale: Locale('en', 'US'),
+    ));
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Login with Google'), findsOneWidget);
+    expect(find.text('Welcome to LalaLaune!'), findsOneWidget);
   });
 }

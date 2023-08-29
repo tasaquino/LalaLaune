@@ -1,0 +1,35 @@
+name: Lalalaune Workflow
+on: [push]
+jobs:
+  run:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+    - uses: actions/checkout@master
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.7.12' # same version I have on my machine 20/05/2023
+        channel: 'stable'
+        architecture: x64
+    - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: flutter pub get
+    - name: Generate L10n
+      run: flutter gen-l10n
+    - name: Generate Style Dictionary from Figma Tokens
+      run: node build.js
+    - name: Generate coverage report
+      run: flutter test --coverage 
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: true
+        files: ./coverage/lcov.info
+        flags: unittests
+        verbose: true

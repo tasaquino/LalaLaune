@@ -8,7 +8,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({
+    super.key,
+    this.locale,
+  });
+  final Locale? locale;
 
   // This widget is the root of your application.
   @override
@@ -17,6 +21,7 @@ class MyApp extends StatelessWidget {
         theme: appTheme,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
+        locale: locale,
         home: const LoginScreen());
   }
 }
