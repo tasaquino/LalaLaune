@@ -1,3 +1,4 @@
+[![Build Status](https://github.com/tasaquino/LalaLaune/actions/workflows/main/badge.svg)](https://github.com/tasaquino/LalaLaune/actions?query=branch%3Amain)
 [![codecov](https://codecov.io/gh/tasaquino/LalaLaune/graph/badge.svg?token=0RIRM8T98A)](https://codecov.io/gh/tasaquino/LalaLaune)
 
 # LalaLaune
