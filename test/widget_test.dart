@@ -31,4 +31,34 @@ void main() {
     expect(find.text('Login with Google'), findsOneWidget);
     expect(find.text('Welcome to LalaLaune!'), findsOneWidget);
   });
+
+  testWidgets('Login screen is displayed correctly in DE',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp(
+      locale: Locale('de', 'DE'),
+    ));
+
+    expect(find.text('Anmelden mit Google'), findsOneWidget);
+    expect(find.text('Willkommen bei LalaLaune!'), findsOneWidget);
+  });
+
+  testWidgets('Login screen is displayed correctly in ES',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp(
+      locale: Locale('es', 'ES'),
+    ));
+
+    expect(find.text('Acceder con Google'), findsOneWidget);
+    expect(find.text('¡Bienvenido a LalaLaune!'), findsOneWidget);
+  });
+
+  testWidgets('Login screen is displayed correctly in FR',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp(
+      locale: Locale('fr', 'FR'),
+    ));
+
+    expect(find.text('Se connecter à Google'), findsOneWidget);
+    expect(find.text('Bienvenue à LalaLaune !'), findsOneWidget);
+  });
 }
