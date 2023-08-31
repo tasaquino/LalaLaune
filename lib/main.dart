@@ -4,9 +4,12 @@ import 'package:lala_laune/style/theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 // coverage:ignore-start
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
+
 // coverage:ignore-end
 
 class MyApp extends StatelessWidget {
