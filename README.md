@@ -14,10 +14,13 @@ The configuration for style-dictionary can be found here: https://github.com/tas
 To generate the style file in dart, with the customised formatters that were created run custom build script from style-dictionary directory:
     node build.js
 
-![design_system](https://github.com/tasaquino/LalaLaune/assets/10437479/02e36715-6f18-42b9-8bca-ed68136dbb7f)
+![design_system](https://github.com/tasaquino/LalaLauneFlutter/assets/10437479/1087569e-371c-46d2-bf12-beeb464a3a13)
+
+
 
 ## Prototype:
-![Screenshot 2023-08-23 at 11 24 07 pm](https://github.com/tasaquino/LalaLaune/assets/10437479/43d64ac5-300a-4457-a55b-fbc6e73ff2b1)
+
+![prototypes_lalalaune](https://github.com/tasaquino/LalaLauneFlutter/assets/10437479/55bc3117-3fb3-4c6c-bae7-7af05b4c89a1)
 
 ## Localisation
 To generate the localisation files run:
